@@ -1,6 +1,6 @@
 # My Project
 
-[specification](shanepanter.com/os/p1.html)
+[specification](https://shanepanter.com/os/p3.html)
 
 - name: TODO
 - email: TODO

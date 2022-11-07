@@ -1,10 +1,9 @@
 #!/bin/bash
 if [ ! -d ./build ]
 then
-    mkdir build
+    mkdir -p build
     cd build
-    cmake .. 
+    cmake -DCMAKE_BUILD_TYPE=Debug ..
 else 
     echo "Build directory is already present. Run clean.sh first!"
 fi
-

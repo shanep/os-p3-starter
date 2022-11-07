@@ -16,14 +16,15 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}")
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}")
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}")
-
 set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake" ${CMAKE_MODULE_PATH})
+set(CMAKE_DEBUG_POSTFIX d)
 
-## Add address sanatizers for all builds
-## Probably want to exclude this if doing a release build
-set(SANITIZE_ADDRESS TRUE)
-find_package(Sanitizers)
-
+## Identify debug vs release builds with a postfix
+## Add address sanatizers for debug build only!
+if (CMAKE_BUILD_TYPE STREQUAL "Debug")
+  set(SANITIZE_ADDRESS TRUE)
+  find_package(Sanitizers)
+endif (CMAKE_BUILD_TYPE STREQUAL "Debug")
 
 ## Add the src to the build
 add_subdirectory(src)

@@ -67,8 +67,6 @@ You need to write enough tests to ensure your memory allocator is correct!
   the size of the struct just **happens** to be the same as a pointer your code will appear to
   work until you either add a new member to `foo` OR you move to a system where the sizes of pointers
   are different. For example moving from a 64bit system to a 32 bit system or vice versa!
-- You can [view a pointer as an array in VSCode]({% post_url 2020-12-10-view-point-as-array-vscode %})
-  when using the debugger.
 - Read [Chapter 14 - Interlude: Memory API](http://pages.cs.wisc.edu/~remzi/OSTEP/vm-api.pdf)
 
 ## Knuth notation to C syntax quick reference

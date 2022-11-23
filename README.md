@@ -1,5 +1,7 @@
 # Project 3
 
+![project meme](meme.gif)
+
 You job is to implement a memory manager using the
 [buddy algorithm](https://drive.google.com/file/d/1G6aozf2ygXF7RL1WGg-iPBDkTusVuvNI/view) as
 described by Dr. Knuth in The Art of Computer programming Volume 1 - Fundamental Algorithms.
